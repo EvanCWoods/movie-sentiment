@@ -4,9 +4,10 @@ import matplotlib.pyplot as plt
 imdb = tf.keras.datasets.imdb
 (train_data, train_labels), (test_data, test_labels) = imdb.load_data()
 
-len(train_data[0]), len(train_data[1])
+print(len(train_data[0]))
+print(len(train_data[1]))
 
-train_data.shape
+print(train_data.shape)
 
 
 
@@ -36,7 +37,9 @@ test_data = tf.keras.preprocessing.sequence.pad_sequences(train_data,
                                                         value=word_index['<PAD>'],
                                                         padding='post',
                                                         maxlen=256)
-len(train_data[0]), len(train_data[1])
+print(train_data[0])
+print(len(train_data[0]))
+print(len(train_data[1]))
 
 
 tf.random.set_seed(42)
