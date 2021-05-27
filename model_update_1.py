@@ -75,3 +75,18 @@ history = model.fit(partial_x_train,
                     validation_data=(x_val, y_val),
                     verbose=1)
 partial_y_train = train_labels[10000:]
+
+
+results = model.evaluate(test_data, test_labels)
+print(results)
+
+def show_model_results(history):
+  plt.plot(history.history['accuracy'], label='accuracy', c='bo')
+  plt.plot(history.history['val_accuracy'], label='val_accuracy', c='b')
+  plt.plot(history.history['loss'], label='loss', c='ro')
+  plt.plot(history.history['val_loss'], label='val_loss', c='r')
+  
+ show_model_results(history=history)
+
+
+
