@@ -37,9 +37,11 @@ test_data = tf.keras.preprocessing.sequence.pad_sequences(train_data,
                                                         value=word_index['<PAD>'],
                                                         padding='post',
                                                         maxlen=256)
-print(train_data[0])
+
 print(len(train_data[0]))
 print(len(train_data[1]))
+print(train_data[0])
+
 
 
 tf.random.set_seed(42)
