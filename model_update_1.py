@@ -89,4 +89,12 @@ def show_model_results(history):
  show_model_results(history=history)
 
 
+random_review = np.random.randint(10000, size=256)
+biased_review = np.full(256, 530)
+test_data = np.append(test_data, [random_review], axis=0)
+test_data = np.append(test_data, [biased_review], axis=0)
+
+print(model.predict(test_data))
+print(model.predict(test_data[-2]))   # Print the predicted result of the random review
+print(model.predict(test_data[-1])).  # Print the predicted result of the biased review
 
